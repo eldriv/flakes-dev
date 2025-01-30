@@ -1,0 +1,35 @@
+* Overview
+This repository contains my nix flakes development environment and it is still under development.
+
+* Download
+To download the flake, run
+#+begin_Src
+git clone git@github.com:eldriv/flakes-dev.git
+#+end_src
+
+* Dependencies
+** Bash script
++ [[https://github.com/eldriv/flakes-dev/lisp][Lisp]] -> [[https://github.com/eldriv/scripts/tree/main/emacs-shell-script][emacs-shell-script]]
+This script serves to run the development environment of my lisp flake.
+* Usage
+** Lisp Environment
+To run Emacs
+#+begin_Src
+emacs-shell -r
+#+end_Src
+To show the output provided by the flake, run
+#+begin_src
+emacs-shell -s
+#+end_src
+To check sbcl version
+#+begin_src
+emacs-shell --sbcl-v
+#+end_Src
+To go inside the shell-environment of the flake, run
+#+begin_src
+emacs-shell -t
+#+end_Src
+To update the lisp flake, run
+#+begin_src
+emacs-shell -u
+#+end_src
