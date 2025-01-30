@@ -9,7 +9,7 @@ git clone git@github.com:eldriv/flakes-dev.git
 
 * Dependencies
 ** Bash script
-+ [[https://github.com/eldriv/flakes-dev/lisp][Lisp]] -> [[https://github.com/eldriv/scripts/tree/main/emacs-shell-script][emacs-shell-script]]
++ [[https://github.com/eldriv/flakes-dev/tree/main/lisp][Lisp]] -> [[https://github.com/eldriv/scripts/tree/main/emacs-shell-script][emacs-shell-script]]
 This script serves to run the development environment of my lisp flake.
 * Usage
 ** Lisp Environment
