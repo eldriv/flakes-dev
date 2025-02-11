@@ -1,11 +1,12 @@
 { pkgs }:
 with pkgs;
 let
-    lispDeps = list: list ++ [ emacs sbcl cl-launch which rlwrap file getopt less curl git glib libfixposix ];
-    librP = lib.strings.makeLibraryPath [ openssl sqlite ];
+  gfxLibs = [ libGL libGLU meson glfw openssl sqlite ];
+  addLibs = list:
+    list ++ [ emacs sbcl cl-launch which rlwrap file getopt less curl git glib libfixposix ];
 in {
-    lisp = mkShell {
-        buildInputs = lispDeps []; # add a temporary placeholder of libraries for future cases.
-        LD_LIBRARY_PATH = librP;
-    };
+  lisp = mkShell {
+    buildInputs = addLibs [] ++ gfxLibs;
+    LD_LIBRARY_PATH = lib.strings.makeLibraryPath gfxLibs;
+  };
 }
